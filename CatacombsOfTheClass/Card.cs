@@ -7,7 +7,7 @@ internal class Card
     public static int NumberOfColors => 4;
     public static int NumberOfRanks => 14;
 
-    public bool IsNumber => (int)Rank <= 10;
+    public bool IsNumber => (int)Rank < 10;
     public bool IsSymbol => !IsNumber;
 
     public CardRank Rank { get; set; }

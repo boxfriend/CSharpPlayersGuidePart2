@@ -86,21 +86,28 @@ Fletching IntToFletching(int fletching)
 //Modified for Vin's Trouble challenge and again for The Properties of Arrows challenge and finally for the Arrow Factories challenge
 class Arrow
 {
-    private int _shaftLength;
-    private ArrowHead _arrowHead;
-    private Fletching _fletching;
+    private readonly static float _lengthCost = 0.05f;
+
+    private readonly int _shaftLength;
+    private readonly ArrowHead _arrowHead;
+    private readonly Fletching _fletching;
+    private readonly float _cost;
+    
 
     public ArrowHead ArrowHead => _arrowHead;
     public Fletching Fletching => _fletching;
     public int Length => _shaftLength;
 
-    public float Cost => (int)_arrowHead + (int)_fletching + (_shaftLength * 0.05f);
+    public float Cost => _cost;
 
     public Arrow(int shaftLength, ArrowHead arrowHead, Fletching fletching)
     {
         _shaftLength = shaftLength;
         _arrowHead = arrowHead;
         _fletching = fletching;
+
+        //Realized accessing the property would needlessly calculate this every time, setting it once is more efficient
+        _cost = (int)_arrowHead + (int)_fletching + (_shaftLength * _lengthCost);
     }
 
     public static Arrow CreateEliteArrow () => new (95, ArrowHead.Steel, Fletching.Plastic);

@@ -16,7 +16,8 @@ Console.Clear();
 var shaft = GetInput("How long would you like the arrow shaft to be? (60 - 100)", 60, 100);
 var arrow = new Arrow(shaft, IntToArrowHead(head), IntToFletching(fletching));
 
-Console.WriteLine($"You have chosen a {arrow.arrowHead} tipped arrow with {arrow.fletching} fletching that is {arrow.shaftLength}cm long. That will be {arrow.GetCost():#.##} gold.");
+//This line has also been modified for Vin's Trouble challenge
+Console.WriteLine($"You have chosen a {arrow.GetArrowHead()} tipped arrow with {arrow.GetFletching()} fletching that is {arrow.GetLength()}cm long. That will be {arrow.GetCost():#.##} gold.");
 
 int GetInput (string text, int min, int max)
 {
@@ -55,20 +56,24 @@ Fletching IntToFletching(int fletching)
     };
 }
 
+//Modified for Vin's Trouble challenge
 class Arrow
 {
-    public int shaftLength;
-    public ArrowHead arrowHead;
-    public Fletching fletching;
+    private int _shaftLength;
+    private ArrowHead _arrowHead;
+    private Fletching _fletching;
 
     public Arrow(int shaftLength, ArrowHead arrowHead, Fletching fletching)
     {
-        this.shaftLength = shaftLength;
-        this.arrowHead = arrowHead;
-        this.fletching = fletching;
+        _shaftLength = shaftLength;
+        _arrowHead = arrowHead;
+        _fletching = fletching;
     }
 
-    public float GetCost () => (int)arrowHead + (int)fletching + (shaftLength * 0.05f);
+    public float GetCost () => (int)_arrowHead + (int)_fletching + (_shaftLength * 0.05f);
+    public int GetLength () => _shaftLength;
+    public ArrowHead GetArrowHead() => _arrowHead;
+    public Fletching GetFletching() => _fletching;
 }
 enum ArrowHead
 {

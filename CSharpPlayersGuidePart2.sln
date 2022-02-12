@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulasTest", "SimulasTest\SimulasTest.csproj", "{9A7957B8-0FD0-455B-B284-FF7EEAF75395}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimulasTest", "SimulasTest\SimulasTest.csproj", "{9A7957B8-0FD0-455B-B284-FF7EEAF75395}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulasSoup", "SimulasSoup\SimulasSoup.csproj", "{F01A5F14-6A1E-4B49-BE27-40C4D7BA084D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimulasSoup", "SimulasSoup\SimulasSoup.csproj", "{F01A5F14-6A1E-4B49-BE27-40C4D7BA084D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VinFletchersArrows", "VinFletchersArrows\VinFletchersArrows.csproj", "{43F3863B-1A0A-44F8-8057-F3E8DDBDBF51}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{F01A5F14-6A1E-4B49-BE27-40C4D7BA084D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F01A5F14-6A1E-4B49-BE27-40C4D7BA084D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F01A5F14-6A1E-4B49-BE27-40C4D7BA084D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43F3863B-1A0A-44F8-8057-F3E8DDBDBF51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43F3863B-1A0A-44F8-8057-F3E8DDBDBF51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43F3863B-1A0A-44F8-8057-F3E8DDBDBF51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43F3863B-1A0A-44F8-8057-F3E8DDBDBF51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

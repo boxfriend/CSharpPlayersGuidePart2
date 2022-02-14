@@ -23,7 +23,7 @@ while(!pack.IsFull)
         continue;
 
     var num = Convert.ToInt32(input);
-    var itemToAdd = InventoryItem.CreateItemFromInt(num+1);
+    var itemToAdd = InventoryItem.CreateItemFromInt(num);
     if(!pack.Add(itemToAdd))
     {
         Console.WriteLine("You cannot add that right now.");

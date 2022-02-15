@@ -69,6 +69,7 @@ void DisplayPack(Pack pack, bool all)
 {
     if(all) Console.WriteLine($"You have a {pack.Capacity} slot pack. It can hold {pack.MaxWeight} pounds with volume of {pack.MaxVolume}");
     Console.WriteLine($"Your pack currently contains {pack.Contains} items that weigh a total of {pack.Weight} pounds with a contained volume of {pack.Volume}");
+    Console.WriteLine(pack.ToString());
 }
 int GetInput()
 {

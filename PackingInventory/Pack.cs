@@ -39,4 +39,13 @@ internal class Pack
         Volume += item.Volume;
         return true;
     }
+
+    public override string ToString ()
+    {
+        var str = "Pack containing: ";
+        foreach(var item in _inventory)
+            str += $"{item?.ToString()} ";
+
+        return str;
+    }
 }

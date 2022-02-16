@@ -7,7 +7,7 @@ Console.WriteLine("You come across an old robot. You may give it three commands.
 for (var i = 0; i < robot.Commands.Length; i++)
 {
     var input = GetInput(i + 1);
-    robot.Commands[i] = RobotCommand.GetCommandFromInput(input);
+    robot.Commands[i] = Robot.GetCommandFromInput(input);
 }
 
 robot.Run();
@@ -22,7 +22,7 @@ string GetInput (int commandNumber)
         Console.Write($"Input command number {commandNumber}: ");
         input = Console.ReadLine();
     }
-    return input;
+    return input!;
 }
 
 bool ValidateInput(string input)

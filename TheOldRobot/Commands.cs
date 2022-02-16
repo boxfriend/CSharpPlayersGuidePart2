@@ -1,18 +1,18 @@
 ﻿namespace TheOldRobot;
 
-internal class OnCommand : RobotCommand
+internal class OnCommand : IRobotCommand
 {
-    public override void Run (Robot bot) => bot.IsPowered = true;
+    public void Run (Robot bot) => bot.IsPowered = true;
 }
 
-internal class OffCommand : RobotCommand
+internal class OffCommand : IRobotCommand
 {
-    public override void Run (Robot bot) => bot.IsPowered = false;
+    public void Run (Robot bot) => bot.IsPowered = false;
 }
 
-internal class NorthCommand : RobotCommand
+internal class NorthCommand : IRobotCommand
 {
-    public override void Run (Robot bot)
+    public void Run (Robot bot)
     {
         if(!bot.IsPowered) 
             return;
@@ -21,9 +21,9 @@ internal class NorthCommand : RobotCommand
     }
 }
 
-internal class SouthCommand : RobotCommand
+internal class SouthCommand : IRobotCommand
 {
-    public override void Run (Robot bot)
+    public void Run (Robot bot)
     {
         if (!bot.IsPowered)
             return;
@@ -32,9 +32,9 @@ internal class SouthCommand : RobotCommand
     }
 }
 
-internal class WestCommand : RobotCommand
+internal class WestCommand : IRobotCommand
 {
-    public override void Run (Robot bot)
+    public void Run (Robot bot)
     {
         if (!bot.IsPowered)
             return;
@@ -43,9 +43,9 @@ internal class WestCommand : RobotCommand
     }
 }
 
-internal class EastCommand : RobotCommand
+internal class EastCommand : IRobotCommand
 {
-    public override void Run (Robot bot)
+    public void Run (Robot bot)
     {
         if (!bot.IsPowered)
             return;

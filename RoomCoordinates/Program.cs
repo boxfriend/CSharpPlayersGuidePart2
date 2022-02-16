@@ -1,5 +1,7 @@
 ﻿using RoomCoordinates;
 
+//So apparently the Random class is introduced later in the book making this illegal for my personal challenge
+//I'm going to allow it though because otherwise this becomes tedious AF
 var rng = new Random();
 var coords = new Coordinate[10];
 for(var i = 0; i < 10; i++)

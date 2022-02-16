@@ -7,15 +7,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimulasTest", "SimulasTest\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimulasSoup", "SimulasSoup\SimulasSoup.csproj", "{F01A5F14-6A1E-4B49-BE27-40C4D7BA084D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VinFletchersArrows", "VinFletchersArrows\VinFletchersArrows.csproj", "{43F3863B-1A0A-44F8-8057-F3E8DDBDBF51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VinFletchersArrows", "VinFletchersArrows\VinFletchersArrows.csproj", "{43F3863B-1A0A-44F8-8057-F3E8DDBDBF51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatacombsOfTheClass", "CatacombsOfTheClass\CatacombsOfTheClass.csproj", "{A3476E1A-5513-4FFB-B718-CAD10F4DD781}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatacombsOfTheClass", "CatacombsOfTheClass\CatacombsOfTheClass.csproj", "{A3476E1A-5513-4FFB-B718-CAD10F4DD781}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe", "TicTacToe\TicTacToe.csproj", "{B49A470F-127B-4BCF-A460-154B7EF77EE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicTacToe", "TicTacToe\TicTacToe.csproj", "{B49A470F-127B-4BCF-A460-154B7EF77EE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackingInventory", "PackingInventory\PackingInventory.csproj", "{78F012D5-F4BA-4E64-8537-9CF5580DEFEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PackingInventory", "PackingInventory\PackingInventory.csproj", "{78F012D5-F4BA-4E64-8537-9CF5580DEFEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheOldRobot", "TheOldRobot\TheOldRobot.csproj", "{D4429D75-8935-4463-9FEB-C71C810F2B68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheOldRobot", "TheOldRobot\TheOldRobot.csproj", "{D4429D75-8935-4463-9FEB-C71C810F2B68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomCoordinates", "RoomCoordinates\RoomCoordinates.csproj", "{38F97875-5A82-4418-B2E7-E39889DE0089}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{D4429D75-8935-4463-9FEB-C71C810F2B68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4429D75-8935-4463-9FEB-C71C810F2B68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4429D75-8935-4463-9FEB-C71C810F2B68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38F97875-5A82-4418-B2E7-E39889DE0089}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38F97875-5A82-4418-B2E7-E39889DE0089}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38F97875-5A82-4418-B2E7-E39889DE0089}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38F97875-5A82-4418-B2E7-E39889DE0089}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

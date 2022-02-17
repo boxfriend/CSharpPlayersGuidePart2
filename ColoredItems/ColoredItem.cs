@@ -11,13 +11,15 @@ internal class ColoredItem<T> where T : Item, new()
     public T Item { get; init; }
     public ConsoleColor Color { get; init; }
 
-    public ColoredItem()
-    {
-        Item = new ();
-        Color = ConsoleColor.Blue; //Was going to leave this as default, but black cannot be seen in console unless background color is changed
-    }
+    public ColoredItem() : this(ConsoleColor.Blue) { } //Was going to leave this as default color, but black cannot be seen in console unless background color is changed
 
-    public ColoredItem (ConsoleColor color) : this() => Color = color;
+    public ColoredItem (ConsoleColor color) : this(new (), color) { }
+
+    public ColoredItem(T item, ConsoleColor color)
+    {
+        Item = item;
+        Color = color;
+    }
 
     public override string ToString () => $"{Color} {Item}";
 }

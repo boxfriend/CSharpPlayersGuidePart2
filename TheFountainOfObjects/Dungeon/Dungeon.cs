@@ -17,6 +17,7 @@ internal class Dungeon
     public void VisitRoom(Point position)
     {
         (var row, var column) = position;
+        
         _rooms[row, column].VisitRoom();
         ScanNearbyRooms(position);
     }

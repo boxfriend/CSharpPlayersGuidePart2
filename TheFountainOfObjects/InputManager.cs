@@ -28,6 +28,7 @@ internal class InputManager
         {
             "enable" => commandArray[1] == "fountain",
             "move" => commandArray[1] == "east" || commandArray[1] == "west" || commandArray[1] == "north" || commandArray[1] == "south",
+            "shoot" => commandArray[1] == "east" || commandArray[1] == "west" || commandArray[1] == "north" || commandArray[1] == "south",
             "help" => true,
             "exit" => true,
             _ => false

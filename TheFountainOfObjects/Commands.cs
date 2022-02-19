@@ -14,7 +14,7 @@ internal class EnableCommand : ICommand
 
     public void Execute(GameManager manager)
     {
-        if (_commandAction != "fountain" || manager.Player.Position != new Point(2,2))
+        if (_commandAction != "fountain" || manager.Player.Position != manager.GetFountainRoom())
         {
             Console.WriteLine("Command failed to execute. Are you sure it is time to use that?");
             return;
@@ -30,24 +30,11 @@ internal class MoveCommand : ICommand
     public MoveCommand(string commandAction) => _commandAction = commandAction;
     public void Execute(GameManager manager)
     {
-        var dir = GetDirection();
+        var dir = DirectionGetter.GetDirection(_commandAction);
 
         manager.MovePlayer(dir);
     }
-
-    private Point GetDirection ()
-    {
-        return _commandAction switch
-        {
-            "north" => new Point(-1, 0),
-            "south" => new Point(1, 0),
-            "east" => new Point(0, 1),
-            "west" => new Point(0, -1),
-            _ => new Point(0, 0)
-        };
-    }
 }
-
 internal class HelpCommand : ICommand
 {
 
@@ -55,14 +42,16 @@ internal class HelpCommand : ICommand
     {
         "Help - Displays 'Help' screen and information about commands",
         "Move <direction> - Allows movement in a direction 'north', 'south', 'east', or 'west'.",
+        "Shoot <direction> - Fires an arrow into the room in the direction specified.",
         "Enable Fountain - Turns the Fountain of Objects on.",
         "Exit - Exit the application"
     };
 
-    public void Execute(GameManager _)
+    public void Execute(GameManager manager)
     {
         Console.Title = "Help menu";
-        Console.Clear();
+        manager.DisplayObjective();
+        Console.WriteLine();
         foreach(var command in _commands)
             Console.WriteLine(command);
 
@@ -77,3 +66,14 @@ internal class ExitCommand : ICommand
     public void Execute (GameManager manager) => Environment.Exit(0);
 }
 
+internal class ShootCommand : ICommand
+{
+    private readonly string _commandAction;
+
+    public ShootCommand (string commandAction) => _commandAction = commandAction;
+    public void Execute(GameManager manager)
+    {
+        var dir = DirectionGetter.GetDirection (_commandAction);
+        manager.ShootInDirection(dir);
+    }
+}

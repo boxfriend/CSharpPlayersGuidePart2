@@ -2,6 +2,9 @@
 
 internal record struct Point(int Row, int Column)
 {   
+
+    public static readonly Point Zero = new (0, 0);
+
     public bool IsAdjacent(Point otherPoint)
     {
         if (this == otherPoint)

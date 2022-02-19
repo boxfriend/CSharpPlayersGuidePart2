@@ -3,7 +3,7 @@
 Console.Title = "The Fountain of Objects";
 
 Console.WriteLine("Welcome to The Fountain of Objects.");
-Console.WriteLine("Would you like to attempt this on Easy, Medium, or Hard difficulty?");
+Console.WriteLine("Would you like to attempt this on Story, Easy, Medium, or Hard difficulty?");
 var input = GetInput();
 var dungeonSize = DifficultyToSize(input);
 
@@ -29,6 +29,7 @@ bool ValidateInput(string input)
 
     return input.ToLower() switch
     {
+        "story" => true,
         "easy" => true,
         "medium" => true,
         "hard" => true,
@@ -36,13 +37,14 @@ bool ValidateInput(string input)
     };
 }
 
-int DifficultyToSize(string input)
+Difficulty DifficultyToSize(string input)
 {
     return input.ToLower() switch
     {
-        "easy" => 4,
-        "medium" => 6,
-        "hard" => 8,
-        _ => 4
+        "story" => Difficulty.Story,
+        "easy" => Difficulty.Easy,
+        "medium" => Difficulty.Medium,
+        "hard" => Difficulty.Hard,
+        _ => Difficulty.Easy
     };
 }

@@ -4,7 +4,7 @@ internal class Room
 {
     public RoomType Type { get; private set; } = RoomType.Empty;
 
-    private RoomActions _roomActions = new EmptyRoom();
+    public RoomActions RoomActions { get; private set; } = new EmptyRoom();
 
     public bool IsVisited { get; private set; }
 
@@ -14,38 +14,42 @@ internal class Room
         if (Type != RoomType.Empty && newType != RoomType.Empty)
             return false;
 
-        //Obviously we don't want the fountain to move
-        if(Type == RoomType.Fountain)
+        //Obviously we don't want the entrance or fountain to move
+        if(Type == RoomType.Fountain || Type == RoomType.Entrance)
             return false;
 
         Type = newType;
-        _roomActions = TypeToActions(newType);
+        RoomActions = TypeToActions(newType);
         return true;
     }
 
     public void VisitRoom()
     {
         IsVisited = true;
-        _roomActions.RoomAction();
+        RoomActions.RoomAction(this);
     }
 
-    public void AdjacentAction () => _roomActions.AdjacentAction();
+    public void AdjacentAction () => RoomActions.AdjacentAction();
 
-    public void DiagonalAction () => _roomActions.DiagonalAction();
+    public void DiagonalAction () => RoomActions.DiagonalAction();
 
     public override string ToString ()
     {
         if (!IsVisited)
             return "?";
 
-        return _roomActions.Display();
+        return RoomActions.Display();
     }
 
     private RoomActions TypeToActions(RoomType type)
     {
         return type switch
         { 
+            RoomType.Entrance => new EntranceRoom(),
             RoomType.Fountain => new FountainRoom(),
+            RoomType.Pit => new PitRoom(),
+            RoomType.Amarok => new AmarokRoom(),
+            RoomType.Maelstrom => new MaelstromRoom(),
             _ => new EmptyRoom()
         };
     }
@@ -54,5 +58,9 @@ internal class Room
 enum RoomType
 {
     Empty,
-    Fountain
+    Fountain,
+    Pit,
+    Amarok,
+    Maelstrom,
+    Entrance
 }

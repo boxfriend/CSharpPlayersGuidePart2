@@ -10,16 +10,17 @@ internal class GameManager
 
     public Player Player => _player;
 
-    public GameManager ()
+    public GameManager (int size)
     {
-        _dungeon = new Dungeon (4);
+        _dungeon = new Dungeon (size);
         _player = new Player ();
         _inputManager = new InputManager ();
     }
 
     public void BeginGame()
     {
-        _dungeon.Rooms[2, 2].TryChangeRoom(RoomType.Fountain);
+        var mid = _dungeon.Size/2;
+        _dungeon.Rooms[mid, mid].TryChangeRoom(RoomType.Fountain);
         DungeonRenderer.DisplayDungeon(_dungeon, _player.Position);
         _gameActive = true;
         GameLoop();

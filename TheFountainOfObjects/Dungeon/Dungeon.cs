@@ -36,7 +36,7 @@ internal class Dungeon
                 if (position.IsAdjacent(new Point(row,column)))
                     room.AdjacentAction();
                 else
-                    room.DiagnonalAction();
+                    room.DiagonalAction();
             }
         }
     }

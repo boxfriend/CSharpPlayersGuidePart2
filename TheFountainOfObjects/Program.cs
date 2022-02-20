@@ -7,8 +7,14 @@ Console.WriteLine("Would you like to attempt this on Story, Easy, Medium, or Har
 var input = GetInput();
 var dungeonSize = DifficultyToSize(input);
 
+//Time in the Cavern challenge
+var dungeonStart = DateTime.Now;
+
 var gameManager = new GameManager(dungeonSize);
 gameManager.BeginGame();
+
+var elapsedTime = DateTime.Now - dungeonStart;
+Console.WriteLine($"You completed the objective in {elapsedTime.Hours} hours, {elapsedTime.Minutes} minutes, and {elapsedTime.Seconds} seconds.");
 
 string GetInput()
 {

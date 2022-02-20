@@ -21,9 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RoomCoordinates", "RoomCoor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WarPreparations", "WarPreparations\WarPreparations.csproj", "{69B6722F-7EF6-4879-A9C2-24C171580E5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColoredItems", "ColoredItems\ColoredItems.csproj", "{7318A6A8-EFCF-4755-85C7-BB0DF8D6697B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ColoredItems", "ColoredItems\ColoredItems.csproj", "{7318A6A8-EFCF-4755-85C7-BB0DF8D6697B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheFountainOfObjects", "TheFountainOfObjects\TheFountainOfObjects.csproj", "{DB964631-28E4-4169-BD76-5E1EA113AFDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheFountainOfObjects", "TheFountainOfObjects\TheFountainOfObjects.csproj", "{DB964631-28E4-4169-BD76-5E1EA113AFDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheRobotPilot", "TheRobotPilot\TheRobotPilot.csproj", "{C5B4C65F-F96D-4BCA-A90B-0CF7EA45A650}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{DB964631-28E4-4169-BD76-5E1EA113AFDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB964631-28E4-4169-BD76-5E1EA113AFDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB964631-28E4-4169-BD76-5E1EA113AFDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5B4C65F-F96D-4BCA-A90B-0CF7EA45A650}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5B4C65F-F96D-4BCA-A90B-0CF7EA45A650}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5B4C65F-F96D-4BCA-A90B-0CF7EA45A650}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5B4C65F-F96D-4BCA-A90B-0CF7EA45A650}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
